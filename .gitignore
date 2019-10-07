@@ -1,0 +1,5 @@
+*.dll
+.vscode
+.objs
+prog2.exe
+prog2
