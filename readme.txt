@@ -53,7 +53,7 @@ Game features/requirements met:
     - Selection (Selection to confirm drop location is good, selection for unit speedup/slowdown)
     - Scoring system (Score goes up when good guys eat, goes down when bad guys eat)
     - Bad guys intercepting food (if they get to the food, not only does score go down, but they take
-                                  the food and none/little is left for good guys)
+                                  the food and little/none is left for good guys)
     - Trees block drops and serve as obstacles for units
     - Players have a limited number of drops to make
     - Mutliple targets (An unlimited number of units can target a food drop at once)
@@ -65,7 +65,8 @@ Things I believe I deserve coolness points for:
     - The selection is future proof (able to support 2^24 objects even though I won't have that many)
     - Being able to speed up or slow down units by selecting them
     - The game (in my opinion) looks nice and clean (I think the shading is a nice touch)
-    - I added an extra goal to the game - the goal is to feed all of the good guys until they are all full.
+    - I added an extra goal to the game - the goal is to feed all of the good guys until they are all full,
+      at which point they disappear.
     - The animations are clean and smooth
 
 If you wish to read more about my design decisions and game details, here was what I wrote as planning for the assignment:
