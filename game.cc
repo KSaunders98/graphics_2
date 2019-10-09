@@ -10,7 +10,7 @@
 //                 state and provides helper functions for updating
 //                 state based on delta time and handling mouse events.
 //
-//    Date:        10/6/2019
+//    Date:        10/8/2019
 //
 //*******************************************************************
 
@@ -764,6 +764,7 @@ bool Game::can_reach(const vec2& a, const vec2& b, float range) const {
 //
 //******************************************************************
 void Game::update_window_title() const {
+    // create string stream to write message to
     std::stringstream sstream;
     sstream.precision(1);
     sstream << GAME_TITLE;
@@ -781,5 +782,6 @@ void Game::update_window_title() const {
         sstream << " | Score: " << std::fixed << score << ", Drops left: " << drops_left;
     }
 
+    // convert string stream to c-type string and set it as window title
     glutSetWindowTitle(sstream.str().c_str());
 }

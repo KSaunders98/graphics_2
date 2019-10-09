@@ -1,6 +1,6 @@
 Student: Kirk Saunders
 Email: ks825016@ohio.edu
-Project: Assignment #1 - Food Drop Game
+Project: Assignment #1 (Second Project) - Food Drop Game
 
     For this assignment, I created a 2D food drop game in which the goal is feed all of the good guys
 with the fewest amount of drops possible, all the while keeping the food away from the bad guys. The player
@@ -20,7 +20,8 @@ At the end, I set the background color back to the background color of the game.
 and to make the good guys move faster when clicked, and the bad guys move slower when clicked. Thus, when the user
 clicks in the window, I process the selection and depending on what was selected, perform an action. If a tree or
 food drop is selected, I do nothing, as that location is not available for a drop. If a good guy is selected, I speed
-it up for a period of time. If a bad guy is selected, I slow it down for a period of time.
+it up for a period of time. If a bad guy is selected, I slow it down for a period of time. If no object is selected,
+the player has clicked an open space and therefore a drop will be made at that location.
 
     While the user can use selection to perform actions in the game, the good guys and bad guys are performing a different
 kind of selection themselves continuously. The units (good guys and bad guys) continuously wander randomly around the game,
@@ -49,6 +50,9 @@ some coolness points.
     All of the objects in the game have slight shading - vertices further from the object's center, origin position are darker than
 vertices closer to the origin. This especially gives circles a nice shading. (This is all done in the vertex shader.)
 
+    I display score and drops left in the window title. This is accomplished by writing them to a stringstream object, then coverting
+that sstream to a c-type string, which can then be passed to glutSetWindowTitle to place it in the window title.
+
 Game features/requirements met:
     - Selection (Selection to confirm drop location is good, selection for unit speedup/slowdown)
     - Scoring system (Score goes up when good guys eat, goes down when bad guys eat)
@@ -61,13 +65,15 @@ Game features/requirements met:
 Things I believe I deserve coolness points for:
     - Units being able to "see" food and target it (They're alive!)
     - Trees actually obscuring units' vision
-    - The whole game being dynamic and thus able to be randomly generated
+    - The whole game being dynamic and thus able to be randomly generated (infinite levels, infinite replayability)
     - The selection is future proof (able to support 2^24 objects even though I won't have that many)
-    - Being able to speed up or slow down units by selecting them
+    - Being able to speed up or slow down units by selecting them is cool and demonstrates selection well
     - The game (in my opinion) looks nice and clean (I think the shading is a nice touch)
     - I added an extra goal to the game - the goal is to feed all of the good guys until they are all full,
-      at which point they disappear.
+      at which point they disappear. This adds more depth to the game, making it cooler.
     - The animations are clean and smooth
+    - The player's score and drops left are displayed in the window title
+    - A plane zooms across the map to drop food, which is pretty cool.
 
 If you wish to read more about my design decisions and game details, here was what I wrote as planning for the assignment:
 

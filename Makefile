@@ -9,9 +9,9 @@
 # Assumes the following file exists in the proper place.
 # This is taken from the makefile that Professor Chelberg
 # provided.
-#include /home/cs425/code-egs/Makefile.defs
+include /home/cs425/code-egs/Makefile.defs
 #include /mnt/c/dev/libraries/Makefile.defs
-include C:/dev/libraries/Makefile_win.defs
+#include C:/dev/libraries/Makefile_win.defs
 # Next line says what options to use to compile programs
 
 # set rm options to unix-based if not defined (on windows I define them in my makefile.defs)
